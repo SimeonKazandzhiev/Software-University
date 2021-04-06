@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 public abstract class BaseAquarium implements Aquarium {
 
     private String name;
-    private int capacity; //o	The number of Fish аn Aquarium can have
+    private int capacity; 
     private Collection<Decoration> decorations;
     private Collection<Fish> fish;
 

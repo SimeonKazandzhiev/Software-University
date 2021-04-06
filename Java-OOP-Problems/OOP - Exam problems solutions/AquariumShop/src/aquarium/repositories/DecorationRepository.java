@@ -8,7 +8,7 @@ import java.util.Collections;
 
 public class DecorationRepository implements Repository {
     private Collection<Decoration> decorations;
-    //(unmodifiable) защо?
+  
 
     public DecorationRepository() {
         this.decorations = new ArrayList<>();

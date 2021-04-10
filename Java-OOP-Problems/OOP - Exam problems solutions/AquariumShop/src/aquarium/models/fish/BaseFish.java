@@ -10,7 +10,7 @@ public abstract class BaseFish implements Fish {
     private int size;
     private double price;
 
-    public BaseFish(String name, String species, double price) {
+    protected BaseFish(String name, String species, double price) {
         this.setName(name);
         this.setSpecies(species);
         this.setPrice(price);
@@ -58,7 +58,7 @@ public abstract class BaseFish implements Fish {
         return this.price;
     }
 
-    public void setPrice(double price) {
+    private void setPrice(double price) {
         if (price <= 0) {
             throw new IllegalArgumentException(ExceptionMessages.FISH_PRICE_BELOW_OR_EQUAL_ZERO);
         }

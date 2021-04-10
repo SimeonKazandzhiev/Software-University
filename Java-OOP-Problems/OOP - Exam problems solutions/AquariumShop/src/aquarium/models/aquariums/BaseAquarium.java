@@ -17,7 +17,7 @@ public abstract class BaseAquarium implements Aquarium {
     private Collection<Decoration> decorations;
     private Collection<Fish> fish;
 
-    public BaseAquarium(String name, int capacity) {
+    protected BaseAquarium(String name, int capacity) {
         this.setName(name);
         this.capacity = capacity;
         this.decorations = new ArrayList<>();
@@ -35,7 +35,7 @@ public abstract class BaseAquarium implements Aquarium {
         return this.name;
     }
 
-    public void setName(String name) {
+    private void setName(String name) {
         if (name == null || name.trim().isEmpty()) {
             throw new NullPointerException(ExceptionMessages.AQUARIUM_NAME_NULL_OR_EMPTY);
         }
